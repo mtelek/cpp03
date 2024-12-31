@@ -6,7 +6,7 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:45:27 by mtelek            #+#    #+#             */
-/*   Updated: 2024/12/31 15:04:10 by mtelek           ###   ########.fr       */
+/*   Updated: 2024/12/31 16:23:13 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,11 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 	return (*this);
 }
 
+int ClapTrap::getMaxHp() const
+{
+	return (10);
+}
+
 void ClapTrap::attack(const std::string &target)
 {
 	if (_hitPoints == 0)
@@ -81,14 +86,14 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << _name << " cannot be repaired anymore, because it has no energy points.\n";
 	if (_hitPoints == 0 || _energyPoints == 0)
 		return ;
-	if (_hitPoints == 10)
+	if (_hitPoints == getMaxHp())
 	{
 		std::cout << "ClapTrap " << _name << " cannot be repaired, because it has full hit points.\n";
 		return;
 	}
-	if ((_hitPoints + amount) > 10)
+	if ((_hitPoints + amount) > (unsigned int)getMaxHp())
 	{
-		_hitPoints = 10;
+		_hitPoints = getMaxHp();
 		_energyPoints--;
 	}
 	else
