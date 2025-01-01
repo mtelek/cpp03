@@ -6,7 +6,7 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 16:53:00 by mtelek            #+#    #+#             */
-/*   Updated: 2025/01/01 21:54:11 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 22:53:29 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 	private:
 		std::string _name;
 	public:
+		DiamondTrap();
 		DiamondTrap(std::string name);
 		~DiamondTrap();
 

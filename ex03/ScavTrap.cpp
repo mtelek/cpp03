@@ -6,13 +6,16 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 15:08:12 by mtelek            #+#    #+#             */
-/*   Updated: 2025/01/01 22:37:28 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 23:05:08 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() {}
+ScavTrap::ScavTrap()
+{
+	std::cout << "ScavTrap constructor called.\n";
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
@@ -20,12 +23,12 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "ScavTrap constructor called.\n";
+	std::cout << "ScavTrap constructor for " <<_name << " called.\n";
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "ScavTrap desctructor called.\n";
+	std::cout << "ScavTrap desctructor for " <<_name << " called.\n";
 }
 
 int ScavTrap::getMaxHp() const

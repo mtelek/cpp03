@@ -6,11 +6,16 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 16:53:03 by mtelek            #+#    #+#             */
-/*   Updated: 2025/01/01 22:47:57 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 23:04:11 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap()
+{
+	std::cout << "DiamondTrap constructor called.\n";
+}
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(), ScavTrap()
 {
@@ -18,12 +23,12 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Frag
 	_hitPoints = FragTrap::_hitPoints;
 	_energyPoints = ScavTrap::_energyPoints;
 	_attackDamage = FragTrap::_attackDamage;
-	std::cout << "DiamondTrap constructor called.\n";
+	std::cout << "DiamondTrap constructor for " <<_name << " called.\n";
 }
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap dectructor called.\n";
+	std::cout << "DiamondTrap desctructor for " <<_name << " called.\n";
 }
 
 int DiamondTrap::getMaxHp() const

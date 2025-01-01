@@ -6,7 +6,7 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:45:29 by mtelek            #+#    #+#             */
-/*   Updated: 2024/12/31 16:21:40 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 22:58:51 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 class ClapTrap
 {
 	protected:
-		static const int MaxHp = 10;
 		std::string _name;
 		int _hitPoints;
 		int _energyPoints;
 		int _attackDamage;
 		
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		~ClapTrap();
 		ClapTrap(const ClapTrap &other);

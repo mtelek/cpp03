@@ -6,13 +6,16 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 16:29:04 by mtelek            #+#    #+#             */
-/*   Updated: 2025/01/01 22:37:40 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 23:03:53 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() {}
+FragTrap::FragTrap()
+{
+	std::cout << "FragTrap constructor called.\n";
+}
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
@@ -20,12 +23,12 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "FragTrap constructor called.\n";
+	std::cout << "FragTrap constructor for " <<_name << " called.\n";
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap destructor for called.\n";
+	std::cout << "FragTrap destructor for " <<_name << " called.\n";
 }
 
 int FragTrap::getMaxHp() const

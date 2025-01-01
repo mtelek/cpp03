@@ -6,17 +6,20 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:45:27 by mtelek            #+#    #+#             */
-/*   Updated: 2025/01/01 22:36:12 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 23:02:31 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("") {}
+ClapTrap::ClapTrap()
+{
+	std::cout << "ClapTrap constructor called.\n";
+}
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "ClapTrap constructor called.\n";
+	std::cout << "ClapTrap constructor for " <<_name << " called.\n";
 	_name = name;
 	_hitPoints = 10;
 	_energyPoints = 10;
@@ -25,7 +28,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap destructor called.\n";	
+	std::cout << "ClapTrap destructor for " <<_name << " called.\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)

@@ -6,7 +6,7 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 15:15:10 by mtelek            #+#    #+#             */
-/*   Updated: 2024/12/31 16:18:58 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 23:17:02 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ScavTrap : public ClapTrap
 		static const int MaxHp = 100;
 
 	public:
+		ScavTrap();
 		ScavTrap(std::string name);
 		~ScavTrap();
 		

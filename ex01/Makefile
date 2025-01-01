@@ -1,6 +1,6 @@
 NAME = ScavTrap
 CC = c++
-FLAGS = -Wextra -Wall -Werror -std=c++98 -pedantic
+FLAGS = -Wextra -Wall -Werror -std=c++98 -pedantic -Wshadow -Wno-shadow
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 
