@@ -6,7 +6,7 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 16:29:17 by mtelek            #+#    #+#             */
-/*   Updated: 2024/12/31 17:32:37 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 22:04:21 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class FragTrap : virtual public ClapTrap
 {
 	public:
+		FragTrap();
 		FragTrap(std::string name);
 		~FragTrap();
 

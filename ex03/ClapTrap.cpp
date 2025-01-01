@@ -6,15 +6,17 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:45:27 by mtelek            #+#    #+#             */
-/*   Updated: 2024/12/31 17:30:55 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 22:36:12 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap() : _name("") {}
+
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Constructor callled.\n";
+	std::cout << "ClapTrap constructor called.\n";
 	_name = name;
 	_hitPoints = 10;
 	_energyPoints = 10;
@@ -23,18 +25,18 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called.\n";	
+	std::cout << "ClapTrap destructor called.\n";	
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	std::cout << "Copy constructor called.\n";
+	std::cout << "ClapTrap copy constructor called.\n";
 	*this = other;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
-	std::cout << "Copy assignment operator called.\n";
+	std::cout << "ClapTrap copy assignment operator called.\n";
 	if (this != &other)
 	{
 		this->_name = other._name;

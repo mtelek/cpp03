@@ -6,7 +6,7 @@
 /*   By: mtelek <mtelek@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 13:45:29 by mtelek            #+#    #+#             */
-/*   Updated: 2024/12/31 17:32:22 by mtelek           ###   ########.fr       */
+/*   Updated: 2025/01/01 22:36:19 by mtelek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ClapTrap
 		int _attackDamage;
 		
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		virtual ~ClapTrap();
 		ClapTrap(const ClapTrap &other);
